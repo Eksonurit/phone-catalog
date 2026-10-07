@@ -45,29 +45,34 @@ export const CartItem: React.FC<Props> = ({ item }) => {
   };
 
   return (
-    <div className={styles['cart-item']}>
+    <Link
+      to={`/${item.category}/${item.itemId}`}
+      className={styles['cart-item']}
+    >
       <div className={styles['top-content']}>
-        <button className={styles.cross} onClick={() => handleDeleteItem(item)}>
+        <button
+          className={styles.cross}
+          onClick={e => {
+            handleDeleteItem(item);
+            e.stopPropagation();
+          }}
+        >
           <Close />
         </button>
-        <Link
-          to={`/${item.category}/${item.itemId}`}
-          className={styles['img-wrapper']}
-        >
+        <div className={styles['img-wrapper']}>
           <img src={item.image} alt={item.itemId} />
-        </Link>
-        <Link
-          to={`/${item.category}/${item.itemId}`}
-          className={styles['item-name-wrapper']}
-        >
-          <span className={styles['item-span']}>{item.name}</span>
-        </Link>
+        </div>
+        <span className={styles['item-span']}>{item.name}</span>
       </div>
       <div className={styles['quantity-wrapper']}>
         <div className={styles['quantity-button-wrapper']}>
           <button
             className={styles['quantity-button']}
-            onClick={() => handleChangeQuantity(item, '-')}
+            onClick={e => {
+              handleChangeQuantity(item, '-');
+              e.stopPropagation();
+              e.preventDefault();
+            }}
             disabled={item.quantity === 1}
           >
             <Minus />
@@ -75,13 +80,17 @@ export const CartItem: React.FC<Props> = ({ item }) => {
           {item.quantity}
           <button
             className={styles['quantity-button']}
-            onClick={() => handleChangeQuantity(item, '+')}
+            onClick={e => {
+              handleChangeQuantity(item, '+');
+              e.stopPropagation();
+              e.preventDefault();
+            }}
           >
             <Plus />
           </button>
         </div>
         <h3 className={styles['item-price']}>${item.price}</h3>
       </div>
-    </div>
+    </Link>
   );
 };

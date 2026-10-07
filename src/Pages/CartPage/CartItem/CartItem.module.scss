@@ -16,12 +16,14 @@
 
   transition:
     box-shadow 0.25s ease,
+    transform 0.25s ease,
     border-color 0.25s ease;
   text-decoration: none;
 
   &:hover {
     border-color: rgb(49 50 55 / 25%);
     box-shadow: 0 6px 18px rgb(0 0 0 / 6%);
+    transform: scale(1.03);
   }
 
   @include tablet {
