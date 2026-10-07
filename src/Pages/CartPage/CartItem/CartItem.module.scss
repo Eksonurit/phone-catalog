@@ -14,7 +14,10 @@
 
   background-color: $white;
 
-  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+  transition:
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+  text-decoration: none;
 
   &:hover {
     border-color: rgb(49 50 55 / 25%);
@@ -84,6 +87,10 @@
   }
 }
 
+.item-name-wrapper {
+  text-decoration: none;
+}
+
 .item-span {
   @include bodyText-DT;
 
@@ -118,7 +125,7 @@
 
   width: 96px;
 
-  color: #000;
+  color: var(--primary-color);
 
   @include bodyText-DT;
 }
@@ -139,9 +146,10 @@
 
   background-color: $white;
 
-  transition: border-color 0.2s ease,
-              background-color 0.2s ease,
-              transform 0.15s ease;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.15s ease;
 
   &:disabled {
     pointer-events: none;
@@ -176,4 +184,3 @@
     width: 80px;
   }
 }
-

@@ -20,18 +20,27 @@ export const Footer = () => {
 
         <ul className={styles['footer-contacts']}>
           <li className={styles['contacts-item']}>
-            <Link to="/" className={styles['contacts-item']}>
+            <Link
+              to="https://github.com/Eksonurit/phone-catalog"
+              className={styles['contacts-item']}
+            >
               Github
             </Link>
           </li>
           <li className={styles['contacts-item']}>
-            <Link to="/" className={styles['contacts-item']}>
+            <Link
+              to="https://t.me/eksonurit"
+              className={styles['contacts-item']}
+            >
               Contacts
             </Link>
           </li>
           <li className={styles['contacts-item']}>
-            <Link to="/" className={styles['contacts-item']}>
-              rights
+            <Link
+              to="https://github.com/Eksonurit/phone-catalog"
+              className={styles['contacts-item']}
+            >
+              Rights
             </Link>
           </li>
         </ul>

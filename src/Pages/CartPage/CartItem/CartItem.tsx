@@ -5,6 +5,7 @@ import { CartContext } from '../../../contexts/CartContext';
 import Plus from '../../../Icons/Plus.svg?react';
 import Minus from '../../../Icons/Minus.svg?react';
 import Close from '../../../Icons/Close.svg?react';
+import { Link } from 'react-router-dom';
 
 interface Props {
   item: CartProduct;
@@ -49,10 +50,18 @@ export const CartItem: React.FC<Props> = ({ item }) => {
         <button className={styles.cross} onClick={() => handleDeleteItem(item)}>
           <Close />
         </button>
-        <div className={styles['img-wrapper']}>
+        <Link
+          to={`/${item.category}/${item.itemId}`}
+          className={styles['img-wrapper']}
+        >
           <img src={item.image} alt={item.itemId} />
-        </div>
-        <span className={styles['item-span']}>{item.name}</span>
+        </Link>
+        <Link
+          to={`/${item.category}/${item.itemId}`}
+          className={styles['item-name-wrapper']}
+        >
+          <span className={styles['item-span']}>{item.name}</span>
+        </Link>
       </div>
       <div className={styles['quantity-wrapper']}>
         <div className={styles['quantity-button-wrapper']}>

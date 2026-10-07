@@ -74,7 +74,7 @@ export const ModelCard: React.FC<ModelCardProps> = ({
   };
 
   useEffect(() => {
-    if (kindOfModel === 'products') {
+    if (kindOfModel === 'product') {
       setToLinkCategory((model as Product).category);
     } else {
       setToLinkCategory(kindOfModel);
