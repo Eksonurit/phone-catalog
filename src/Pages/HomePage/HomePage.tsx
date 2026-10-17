@@ -48,7 +48,7 @@ export const HomePage = () => {
           <HeroSection />
           <ItemsSlider
             models={newProducts}
-            kindOfModel="products"
+            kindOfModel="product"
             title="Brand new models"
             isLoading={isLoading}
             loaderCards={loaderCards}
@@ -56,7 +56,7 @@ export const HomePage = () => {
           <Categories />
           <ItemsSlider
             models={hotPriceProducts}
-            kindOfModel="products"
+            kindOfModel="product"
             title="Hot Prices"
             hotPrice={true}
             isLoading={isLoading}

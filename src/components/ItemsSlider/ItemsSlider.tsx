@@ -9,7 +9,7 @@ import ArrowRight from '../../Icons/ChevronArrowRight.svg?react';
 
 interface Props {
   models: PhoneModel[] | AccessoriesModel[] | TabletModel[] | Product[];
-  kindOfModel: 'phones' | 'tablets' | 'accessories' | 'products';
+  kindOfModel: 'phones' | 'tablets' | 'accessories' | 'product';
   title: string;
   hotPrice?: boolean;
   isLoading: boolean;

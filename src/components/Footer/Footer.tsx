@@ -2,7 +2,7 @@
 import logo from '../../images/Logo.svg';
 import { Link } from 'react-router-dom';
 import styles from './Footer.module.scss';
-import arrowTop from '../../Icons/ChevronArrowRight.svg';
+import ArrowTop from '../../Icons/ChevronArrowRight.svg?react';
 export const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({
@@ -51,11 +51,7 @@ export const Footer = () => {
             className={styles['back-to-top__button']}
             onClick={scrollToTop}
           >
-            <img
-              src={arrowTop}
-              alt=""
-              className={styles['back-to-top__button-svg']}
-            />
+            <ArrowTop className={styles['back-to-top__button-svg']} />
           </button>
         </div>
       </div>
